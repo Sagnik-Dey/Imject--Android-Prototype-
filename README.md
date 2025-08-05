@@ -16,7 +16,7 @@
 - Export the final arrangement to a clean **PDF file**  
 - Store and load projects from your device
 
-<img width="1480" height="2800" alt="1754415893315-portrait" src="https://github.com/user-attachments/assets/91518314-0596-4f5e-a6c0-9ee8997ebdaf" />        <img width="1480" height="2800" alt="1754416225756-portrait" src="https://github.com/user-attachments/assets/3439632f-d616-4e4a-826a-d48df33c74aa" />
+<img width="317" height="600" alt="1754415893315-portrait" src="https://github.com/user-attachments/assets/54308cd5-e441-4e4b-a019-d05caf70991e" /> <img width="317" height="600" alt="1754416225756-portrait" src="https://github.com/user-attachments/assets/df5d3afb-fb8e-4a90-86d1-98c1706d61df" />
 
 ---
 
