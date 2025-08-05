@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <base href="/" />
+    <title>Ionic Vanilla</title>
+
+    <!-- Ionic Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+
+    <!-- Your Styles -->
+    <link rel="stylesheet" href="./css/editor.css" />
+
+    <!-- Ionic Scripts -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <script src="https://unpkg.com/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <ion-app>
+      <ion-menu content-id="main-content" id="menu">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Images</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-list id="images-list"> </ion-list>
+        </ion-content>
+      </ion-menu>
+
+      <ion-header>
+        <div class="main-app">
+          <div class="head">
+            <div class="top-section">
+              <ion-button slot="start" id="menu-btn">
+                <img
+                  src="./assets/icons/menu-icon@1x.png"
+                  srcset="
+                    ./assets/icons/menu-icon@2x.png 2x,
+                    ./assets/icons/menu-icon@3x.png 3x
+                  "
+                  alt="menu"
+                />
+              </ion-button>
+
+              <ion-label id="title-label">untitled</ion-label>
+            </div>
+
+            <div class="buttons-wrap">
+              <ion-button expand="block" id="upload-btn"> Upload </ion-button>
+              <input
+                type="file"
+                id="file-input"
+                accept="image/*"
+                multiple
+                style="display: none"
+              />
+              <ion-button expand="block" id="add-btn"> Add images </ion-button>
+            </div>
+
+            <div>
+              <ion-label id="layout-label">Current layout: None</ion-label>
+            </div>
+          </div>
+        </div>
+      </ion-header>
+
+      <ion-content>
+        <div class="main-app" id="pages">
+          <div class="scroll-wrapper">
+            <div class="page-container">
+              <div class="a4-page"></div>
+            </div>
+          </div>
+        </div>
+      </ion-content>
+
+      <ion-footer>
+        <div class="footer">
+          <ion-button fill="clear" id="btn-1x1">
+            <img
+              src="./assets/icons/layout-1x1-icon@1x.png"
+              srcset="
+                ./assets/icons/layout-1x1-icon@2x.png 2x,
+                ./assets/icons/layout-1x1-icon@3x.png 3x
+              "
+              alt="layout 1x1"
+              id="icon-1x1"
+            />
+          </ion-button>
+
+          <ion-button fill="clear" id="btn-2x2">
+            <img
+              src="./assets/icons/layout-2x2-icon@1x.png"
+              srcset="
+                ./assets/icons/layout-2x2-icon@2x.png 2x,
+                ./assets/icons/layout-2x2-icon@3x.png 3x
+              "
+              alt="layout 2x2"
+              id="icon-2x2"
+            />
+          </ion-button>
+
+          <ion-button fill="clear" id="btn-2x3">
+            <img
+              src="./assets/icons/layout-2x3-icon@1x.png"
+              srcset="
+                ./assets/icons/layout-2x3-icon@2x.png 2x,
+                ./assets/icons/layout-2x3-icon@3x.png 3x
+              "
+              alt="layout 2x3"
+              id="icon-2x3"
+            />
+          </ion-button>
+
+          <ion-button fill="clear" id="btn-3x3">
+            <img
+              src="./assets/icons/layout-3x3-icon@1x.png"
+              srcset="
+                ./assets/icons/layout-3x3-icon@2x.png 2x,
+                ./assets/icons/layout-3x3-icon@3x.png 3x
+              "
+              alt="layout 3x3"
+              id="icon-3x3"
+            />
+          </ion-button>
+
+          <ion-button fill="clear" id="save-btn">
+            <img
+              src="./assets/icons/save-icon@1x.png"
+              srcset="
+                ./assets/icons/save-icon@2x.png 2x,
+                ./assets/icons/save-icon@3x.png 3x
+              "
+              alt="save"
+            />
+          </ion-button>
+
+          <ion-button fill="clear" id="export-btn">
+            <img
+              src="./assets/icons/export-icon@1x.png"
+              srcset="
+                ./assets/icons/export-icon@2x.png 2x,
+                ./assets/icons/export-icon@3x.png 3x
+              "
+              alt="export"
+            />
+          </ion-button>
+        </div>
+      </ion-footer>
+      <ion-alert class="file-save-alert"></ion-alert>
+      <ion-loading
+        id="pdfLoader"
+        message="Generating PDF..."
+        spinner="bubbles"
+        duration="0"
+      ></ion-loading>
+      <ion-loading
+        id="fileSaveLoader"
+        message="Saving file..."
+        spinner="bubbles"
+        duration="0"
+      ></ion-loading>
+      <ion-toast id="pdfToast" duration="2500"></ion-toast>
+      <ion-toast id="warningToast" duration="2500"></ion-toast>
+    </ion-app>
+    <script type="module" src="./js/editor.js"></script>
+  </body>
+</html>

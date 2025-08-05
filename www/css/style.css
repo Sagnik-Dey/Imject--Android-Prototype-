@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+:root {
+  /* Color styles */
+  --main-background: #292f36;
+
+  --primary--primary-50: #f3f3f4;
+  --primary--primary-100: #d9d8dc;
+  --primary--primary-200: #c6c6cb;
+  --primary--primary-300: #adabb4;
+  --primary--primary-400: #9d9ba5;
+  --primary--primary-500: #84828f;
+  --primary--primary-600: #787682;
+  --primary--primary-700: #5e5c66;
+  --primary--primary-800: #49484f;
+  --primary--primary-900: #37373c;
+
+  --secondary--secondary-50: #ecf6fe;
+  --secondary--secondary-100: #c4e3fc;
+  --secondary--secondary-200: #a8d6fa;
+  --secondary--secondary-300: #80c3f8;
+  --secondary--secondary-400: #68b7f7;
+  --secondary--secondary-500: #42a5f5;
+  --secondary--secondary-600: #3c96df;
+  --secondary--secondary-700: #2f75ae;
+  --secondary--secondary-800: #245b87;
+  --secondary--secondary-900: #1c4567;
+
+  --tertiary--tertiary-50: #e8f1ee;
+  --tertiary--tertiary-100: #b7d3c9;
+  --tertiary--tertiary-200: #94beaf;
+  --tertiary--tertiary-300: #63a18b;
+  --tertiary--tertiary-400: #458e75;
+  --tertiary--tertiary-500: #167252;
+  --tertiary--tertiary-600: #14684b;
+  --tertiary--tertiary-700: #10513a;
+  --tertiary--tertiary-800: #0c3f2d;
+  --tertiary--tertiary-900: #093022;
+}
+
+html, body, ion-app {
+  height: 100%;
+  width: 100%;
+}
+ion-app {
+  --ion-background-color: var(--main-background);
+  height: 100vh;
+}
+ion-content {
+  background-color: transparent;
+}
+ion-button {
+  margin-top: 20px;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 12px;
+}
+ion-text {
+  display: block;
+  margin-top: 20px;
+  font-size: 18px;
+}
+ion-toolbar#main-title-bar {
+  background-color: var(--main-background);
+  text-align: center;
+  color: #ffffff;
+  font-family: "Poppins";
+  font-weight: 700;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ion-button#new-btn {
+  --background: var(--secondary--secondary-300);
+  --color: var(--primary--primary-900);
+  border-radius: 10px;
+  --border-radius: 10px !important;
+}
+ion-button#open-btn {
+  --background: var(--tertiary--tertiary-200);
+  --color: var(--primary--primary-900);
+  border-radius: 10px;
+  --border-radius: 10px !important;
+}
+div.main-app {
+  padding: 0px 25px;
+  /* overflow-y: auto; */
+  height: 100%;
+}
+img.btn-icon {
+  margin: 0 12px;
+  width: 17px;
+}
+ion-button#new-btn::part(native) {
+  border-radius: 10px;
+  --border-radius: 10px;
+}
+ion-button#open-btn::part(native) {
+  border-radius: 10px;
+  --border-radius: 10px;
+}
+ion-label#files-label {
+  color: #FFFFFF;
+  font-family: 'Poppins';
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 50px;
+  display: block;
+}
+ion-card.file-card {
+  --background: var(--primary--primary-800);
+  border-radius: 10px;
+  border-top: 3px solid var(--secondary--secondary-300);
+  margin: 12px 0px;
+}
+ion-card-title.card-title {
+  --color: var(--primary--primary-50);
+  font-family: 'Poppins';
+  font-size: 16px;
+}
+ion-card-subtitle.card-subtitle {
+  --color: var(--primary--primary-100);
+  font-family: 'Poppins';
+  font-size: 10px;
+}
+div.card-header-data {
+  display: inline-block;
+}
+ion-button.delete-btn-card {
+  /* display: inline-block; */
+  margin-left: auto;
+  margin-right: 5px;
+  float: right;
+}
+div.header-wrap {
+  max-height: 220px;
+}
+ion-content.non-scroll::part(scroll) {
+  overflow: hidden;
+}
+div.card-section {
+  margin-top: 0px;
+  border: none;
+  max-height: calc(100% - 220px);
+  overflow-y: auto;
+}
+ion-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+ion-alert {
+  font-family: 'Poppins';
+}
+ion-alert::part(header) {
+  font-family: 'Poppins';
+  color: var(--primary--primary-100); 
+}
+.alert-wrapper.sc-ion-alert-md {
+  font-family: 'Poppins';
+  padding: 10px;
+  width: 400px;
+  color: var(--primary--primary-200) !important;
+  background: var(--main-background) !important;
+  outline: none !important;
+  border: none !important;
+}
+.alert-title.sc-ion-alert-md {
+  color: var(--primary--primary-100) !important;
+  font-family: 'Poppins';
+}
+
+.alert-input.sc-ion-alert-md {
+  color: var(--primary--primary-200) !important; 
+  font-family: 'Poppins';
+}
+.alert-button.sc-ion-alert-md {
+  font-family: 'Poppins';
+  padding: 8px 20px;
+  color: var(--primary--primary-200) !important; 
+}
+.alert-button-confirm {
+  font-family: 'Poppins';
+  background-color: var(--tertiary--tertiary-700) !important; 
+  border-radius: 10px !important;
+}

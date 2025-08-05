@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <base href="/" />
+    <title>Ionic Vanilla</title>
+
+    <!-- Ionic Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+
+    <!-- Your Styles -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Ionic Scripts -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <script src="https://unpkg.com/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+
+    <!-- Your Logic -->
+  </head>
+  <body>
+    <ion-app>
+      <ion-header>
+        <ion-toolbar id="main-title-bar">
+          <ion-title>Imject</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="ion-padding non-scroll">
+        <div class="main-app">
+          <div class="header-wrap">
+            <ion-button expand="full" id="new-btn">
+              <img
+                src="/assets/icons/new-file@1x.png"
+                srcset="
+                  ./assets/icons/new-file@2x.png 2x,
+                  ./assets/icons/new-file@3x.png 3x
+                "
+                alt="new-file"
+                class="btn-icon"
+              />
+              New
+            </ion-button>
+            <ion-button expand="full" id="open-btn">
+              <img
+                src="/assets/icons/open-file@1x.png"
+                srcset="
+                  ./assets/icons/open-file@2x.png 2x,
+                  ./assets/icons/open-file@3x.png 3x
+                "
+                alt="open-file"
+                class="btn-icon"
+              />
+              Open
+            </ion-button>
+
+            <ion-label id="files-label">Files</ion-label>
+          </div>
+
+          <div class="card-section">
+          </div>
+        </div>
+        <ion-loading
+          id="editor-loading"
+          message="Loading file..."
+          spinner="bubbles"
+          duration="0"
+        ></ion-loading>
+        <ion-toast id="file-not-found-toast" duration="3000"></ion-toast>
+      </ion-content>
+    </ion-app>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
