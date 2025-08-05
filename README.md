@@ -79,7 +79,7 @@
 ```
 📁 dist/                   ← Final Vite build output  
 📁 www/                    ← Source code (HTML/CSS/JS)  
-📁public/                  ← Static assets (images, icons)
+📁 public/                 ← Static assets (images, icons)
 📄 capacitor.config.json  
 📄 vite.config.js  
 ```
