@@ -38,18 +38,23 @@
    npx cap add android
    ```
 
-5. Copy the build to Capacitor:
+5. Generate the assets
+   ```bash
+   npx @capacitor/assets generate --android
+   ```
+
+6. Copy the build to Capacitor:
    ```bash
    npx cap copy android
    npx cap sync android
    ```
 
-6. Run on your Android device:
+7. Run on your Android device:
    ```bash
    npx cap run android
    ```
 
-7. If you want to open the project in Android Studio:
+8. If you want to open the project in Android Studio:
    ```bash
    npx cap open android
    ```
@@ -80,6 +85,7 @@
 📁 dist/                   ← Final Vite build output  
 📁 www/                    ← Source code (HTML/CSS/JS)  
 📁 public/                 ← Static assets (images, icons)
+📁 assets/                 ← contains app icon and splash image
 📄 capacitor.config.json  
 📄 vite.config.js  
 ```
