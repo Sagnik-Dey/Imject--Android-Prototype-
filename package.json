@@ -8,8 +8,8 @@
     "dev": "vite"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Sagnik Dey",
+  "license": "MIT",
   "description": "",
   "dependencies": {
     "@capacitor-community/sqlite": "^7.0.1",
